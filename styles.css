@@ -1,0 +1,140 @@
+:root {
+  --color-bg: #f0f2f5;
+  --color-primary: #4a90e2;
+  --color-secondary: #50e3c2;
+  --color-text: #333333;
+  --color-white: #ffffff;
+  --radius: 12px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+header {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  padding: 20px 10px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+header p {
+  font-size: 18px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+main {
+  padding: 20px;
+}
+
+.box {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+.description-box {
+  background-color: #fafafa;
+  border-left: 4px solid var(--color-primary);
+  padding: 10px;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-item {
+  flex: 1 1 300px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.image-item:hover {
+  transform: scale(1.05);
+}
+
+.image-item a {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* 4:3 aspect */
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figcaption.caption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+  background-color: #fafafa;
+  padding: 5px 10px;
+  border-radius: var(--radius);
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+footer {
+  padding: 20px 10px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    margin: 10px;
+    padding: 10px;
+  }
+  header h1 {
+    font-size: 24px;
+  }
+  header p {
+    font-size: 14px;
+  }
+  .image-row {
+    gap: 10px;
+  }
+}
+
