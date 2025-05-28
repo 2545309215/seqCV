@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -47,6 +47,12 @@ main {
   border-radius: var(--radius);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+
+  /* Center content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .box:hover {
@@ -69,16 +75,25 @@ h2 {
 }
 
 .image-row {
+  max-width: 700px;
+  min-width: 60%;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .image-item {
-
-  width: 100%;
-  height: auto;
+  width: 90%;
+  margin: 10px;
   transition: transform 0.3s ease;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .image-item:hover {
@@ -87,32 +102,33 @@ h2 {
 
 .image-item a {
   display: block;
-  position: relative;
+  padding: 10px 10px;
   width: 100%;
-  padding-bottom: 100%; /* 4:3 aspect */
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+  position: relative;
 }
 
 .cover {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  /* or 'cover' if you'd rather crop than pad */
+  display: block;
 }
 
 figcaption.caption {
-  margin-top: 8px;
-  font-size: 14px;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 600;
   color: #555;
+  width: 100%;
   background-color: #fafafa;
   padding: 5px 10px;
   border-radius: var(--radius);
   border: 1px solid #e0e0e0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.279);
   text-align: center;
 }
 
@@ -128,14 +144,16 @@ footer {
     margin: 10px;
     padding: 10px;
   }
+
   header h1 {
     font-size: 24px;
   }
+
   header p {
     font-size: 14px;
   }
+
   .image-row {
     gap: 10px;
   }
 }
-
